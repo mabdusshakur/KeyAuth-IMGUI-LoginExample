@@ -54,4 +54,7 @@
     <Library Include="libcurl.lib" />
     <Library Include="library_x64.lib" />
   </ItemGroup>
+  <ItemGroup>
+    <Font Include="SegoeUI.ttf" />
+  </ItemGroup>
 </Project>

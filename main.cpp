@@ -61,6 +61,8 @@ int main()
     //Colors & styles & Customizations
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
+    ImGuiIO& IO = ImGui::GetIO(); (void)IO;
+    DefaultFont = IO.Fonts->AddFontFromFileTTF(".\\SegoeUI.ttf", 20.0f, NULL, IO.Fonts->GetGlyphRangesCyrillic());
     ImGui_ImplWin32_Init(hwnd);
     ImGui_ImplDX9_Init(g_pd3dDevice);
 

@@ -179,6 +179,9 @@
     <Library Include="libcurl.lib" />
     <Library Include="library_x64.lib" />
   </ItemGroup>
+  <ItemGroup>
+    <Font Include="SegoeUI.ttf" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
