@@ -7,10 +7,10 @@
 
 using namespace KeyAuth;
 
-std::string name = ""; // application name. right above the blurred text aka the secret on the licenses tab among other tabs
-std::string ownerid = ""; // ownerid, found in account settings. click your profile picture on top right of dashboard and then account settings.
-std::string secret = ""; // app secret, the blurred text on licenses tab and other tabs
-std::string version = "1.0"; // leave alone unless you've changed version on website
+std::string name = "AllianceSender"; // application name. right above the blurred text aka the secret on the licenses tab among other tabs
+std::string ownerid = "ca7dzFQ4cG"; // ownerid, found in account settings. click your profile picture on top right of dashboard and then account settings.
+std::string secret = "fc4e9fc3db6db9db51c6ab8152e12e56e2eb74807523259c37762edddd23a4e8"; // app secret, the blurred text on licenses tab and other tabs
+std::string version = "1.2"; // leave alone unless you've changed version on website
 
 api KeyAuthApp(name, ownerid, secret, version);
 
@@ -101,39 +101,39 @@ int main()
             if (ImGui::Button("Register | Username, Password, License")) {
                 KeyAuthApp.regstr(username, password, license);
                 if (KeyAuthApp.data.success) {
-                    MessageBoxA(0, "Success", KeyAuthApp.data.message.c_str(), 0);
+                    MessageBoxA(0, KeyAuthApp.data.message.c_str(),"Success",  0);
                 }
                 else if (!KeyAuthApp.data.success) {
-                    MessageBoxA(0, "Failed", KeyAuthApp.data.message.c_str(), 0);
+                    MessageBoxA(0, KeyAuthApp.data.message.c_str(),"Failed",  0);
                 }
             }
 
             if (ImGui::Button("Login | Username And Password")) {
                 KeyAuthApp.login(username, password);
                 if (KeyAuthApp.data.success) {
-                    MessageBoxA(0, "Success", KeyAuthApp.data.message.c_str(), 0);
+                    MessageBoxA(0, KeyAuthApp.data.message.c_str(),"Success",  0);
                 }
                 else if (!KeyAuthApp.data.success) {
-                    MessageBoxA(0, "Failed", KeyAuthApp.data.message.c_str(), 0);
+                    MessageBoxA(0, KeyAuthApp.data.message.c_str(),"Failed",  0);
                 }
             }
 
             if (ImGui::Button("Login With License Only")) {
                 KeyAuthApp.license(license);
                 if (KeyAuthApp.data.success) {
-                    MessageBoxA(0, "Success", KeyAuthApp.data.message.c_str(), 0);
+                    MessageBoxA(0, KeyAuthApp.data.message.c_str(),"Success",  0);
                 }
                 else if(!KeyAuthApp.data.success) {
-                    MessageBoxA(0, "Failed", KeyAuthApp.data.message.c_str(), 0);
+                    MessageBoxA(0, KeyAuthApp.data.message.c_str(),"Failed",  0);
                 }
             }
             if (ImGui::Button("Upgrade | Username and License")) {
                 KeyAuthApp.upgrade(username, license);
                 if (KeyAuthApp.data.success) {
-                    MessageBoxA(0, "Success", KeyAuthApp.data.message.c_str(), 0);
+                    MessageBoxA(0, KeyAuthApp.data.message.c_str(),"Success",  0);
                 }
                 else if (!KeyAuthApp.data.success) {
-                    MessageBoxA(0, "Failed", KeyAuthApp.data.message.c_str(), 0);
+                    MessageBoxA(0, KeyAuthApp.data.message.c_str(),"Failed",  0);
                 }
             }
             ImGui::End();
