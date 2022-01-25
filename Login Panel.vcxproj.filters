@@ -51,7 +51,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="C:\Users\N\Desktop\KeyAuth-CPP-Example-main\KeyAuth-CPP-Example-main\library_x64.lib" />
-    <Library Include="C:\Users\N\Desktop\KeyAuth-CPP-Example-main\KeyAuth-CPP-Example-main\libcurl.lib" />
+    <Library Include="libcurl.lib" />
+    <Library Include="library_x64.lib" />
   </ItemGroup>
 </Project>
