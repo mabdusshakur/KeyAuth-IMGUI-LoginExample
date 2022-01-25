@@ -136,10 +136,6 @@ int main()
                     MessageBoxA(0, "Failed", KeyAuthApp.data.message.c_str(), 0);
                 }
             }
-            /*if (ImGui::Button("it should pop up when invalid hwid"))
-            {
-                HWID = !HWID;
-            }*/
             ImGui::End();
         }
 
